@@ -3,101 +3,674 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para mi muñeca ♡</title>
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0; min-height:100vh; overflow-x:hidden;
- font-family:Georgia,'Times New Roman',serif;
- background:linear-gradient(135deg,#fff5fa,#ffdbea,#fff8fc);
- color:#633b4d;
- display:flex; align-items:center; justify-content:center;
- padding:24px;
+
+* {
+    box-sizing: border-box;
 }
-.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.heart{position:absolute;bottom:-30px;font-size:20px;animation:float 8s linear infinite;opacity:.55}
-@keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
-.envelope{
- width:min(92vw,520px); min-height:650px; position:relative;
- display:flex;align-items:center;justify-content:center;
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff5fa,
+        #ffdbea,
+        #fff8fc
+    );
+
+    color: #633b4d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
 }
-.card{
- width:100%; min-height:650px; padding:42px 30px;
- border-radius:28px; background:rgba(255,255,255,.86);
- box-shadow:0 20px 60px rgba(166,77,116,.22);
- border:1px solid rgba(214,126,163,.35);
- text-align:center;
- backdrop-filter:blur(8px);
+
+
+/* =========================
+   CORAZONES FLOTANTES
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
 }
-.cover h1{font-size:42px;margin:75px 0 8px;color:#b54f7c}
-.cover .subtitle{font-size:19px;font-style:italic;margin-bottom:42px}
-button{
- border:0;border-radius:999px;padding:14px 25px;
- background:#d96b9a;color:white;font-size:17px;
- cursor:pointer;box-shadow:0 8px 20px rgba(217,107,154,.3);
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+
+    font-size: 20px;
+
+    animation: float 8s linear infinite;
+
+    opacity: 0.55;
 }
-button:active{transform:scale(.97)}
-.letter{display:none;text-align:left;line-height:1.75;font-size:17px}
-.letter h2{text-align:center;color:#b54f7c;font-size:30px;margin-top:0}
-.letter p{margin:0 0 18px}
-.signature{text-align:center;margin-top:28px;font-size:20px;color:#b54f7c}
-.music{
- margin:18px auto 0; text-align:center; font-family:Arial,sans-serif;
- font-size:13px;color:#8b6374
+
+@keyframes float {
+
+    to {
+        transform:
+            translateY(-115vh)
+            rotate(20deg);
+
+        opacity: 0;
+    }
+
 }
-.music a{color:#b54f7c}
-.small{font-family:Arial,sans-serif;font-size:12px;color:#a27c8d;text-align:center;margin-top:24px}
-@media(max-width:430px){
- .card{padding:30px 22px;min-height:620px}
- .cover h1{font-size:35px;margin-top:65px}
- .letter{font-size:16px}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.envelope {
+
+    width: min(92vw, 520px);
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.card {
+
+    width: 100%;
+
+    min-height: 650px;
+
+    padding: 42px 30px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.86);
+
+    box-shadow:
+        0 20px 60px
+        rgba(166, 77, 116, 0.22);
+
+    border:
+        1px solid
+        rgba(214, 126, 163, 0.35);
+
+    text-align: center;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.cover h1 {
+
+    font-size: 42px;
+
+    margin:
+        75px
+        0
+        8px;
+
+    color: #b54f7c;
+}
+
+
+.cover .subtitle {
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    margin-bottom: 42px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    border: 0;
+
+    border-radius: 999px;
+
+    padding:
+        14px
+        25px;
+
+    background: #d96b9a;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(217, 107, 154, 0.3);
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+
+button:hover {
+
+    background: #c95788;
+
+}
+
+
+button:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.letter {
+
+    display: none;
+
+    text-align: left;
+
+    line-height: 1.75;
+
+    font-size: 17px;
+}
+
+
+.letter h2 {
+
+    text-align: center;
+
+    color: #b54f7c;
+
+    font-size: 30px;
+
+    margin-top: 0;
+}
+
+
+.letter p {
+
+    margin:
+        0
+        0
+        18px;
+}
+
+
+/* =========================
+   CONTROL DE MÚSICA
+========================= */
+
+.music-control {
+
+    text-align: center;
+
+    margin:
+        10px
+        0
+        25px;
+}
+
+
+.music-title {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #8b6374;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   FIRMA
+========================= */
+
+.signature {
+
+    text-align: center;
+
+    margin-top: 28px;
+
+    font-size: 20px;
+
+    color: #b54f7c;
+}
+
+
+.small {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #a27c8d;
+
+    text-align: center;
+
+    margin-top: 24px;
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 430px) {
+
+    .card {
+
+        padding:
+            30px
+            22px;
+
+        min-height: 620px;
+    }
+
+
+    .cover h1 {
+
+        font-size: 35px;
+
+        margin-top: 65px;
+    }
+
+
+    .letter {
+
+        font-size: 16px;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
-<div class="hearts" id="hearts"></div>
-<div class="envelope">
-<div class="card">
-<section class="cover" id="cover">
-<div style="font-size:54px">💗</div>
-<h1>Para mi muñeca</h1>
-<div class="subtitle">Feliz primer mes juntitos ♡</div>
-<p>Hay algo que quiero decirte...</p>
-<button onclick="openLetter()">Abrir mi cartita 💌</button>
-<div class="music">
-🎵 <a href="https://www.youtube.com/watch?v=78qlqORrVu0" target="_blank" rel="noopener">Escuchar “Vals Poético” mientras lees</a>
+
+
+<!-- =========================
+     AUDIO
+========================= -->
+
+<audio
+    id="musica"
+    src="vals_poetico.mp3"
+    preload="auto"
+    loop>
+</audio>
+
+
+<!-- =========================
+     CORAZONES
+========================= -->
+
+<div
+    class="hearts"
+    id="hearts">
 </div>
+
+
+<div class="envelope">
+
+
+<div class="card">
+
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<section
+    class="cover"
+    id="cover">
+
+
+<div style="font-size:54px;">
+    💗
+</div>
+
+
+<h1>
+    Para mi muñeca
+</h1>
+
+
+<div class="subtitle">
+    Feliz primer mes juntitos ♡
+</div>
+
+
+<p>
+    Hay algo que quiero decirte...
+</p>
+
+
+<button
+    onclick="openLetter()">
+
+    Abrir mi cartita 💌
+
+</button>
+
+
+<div
+    style="
+        margin-top:18px;
+        font-family:Arial,sans-serif;
+        font-size:13px;
+        color:#8b6374;
+    ">
+
+    🎵 Vals Poético · Natalia Lafourcade
+
+</div>
+
+
 </section>
 
-<section class="letter" id="letter">
-<h2>Mi amooooooooor 💗</h2>
-<p>Feliz mes juntitos ^ ^</p>
-<p>No sabes realmente lo feliz que estoy de que ya haya pasado un mes desde que empezamos a estar juntitos. La verdad es que ha sido un mes en el que no he sentido pasar los días. Me la paso tan bien a tu lado que para mí fue como un abrir y cerrar de ojos y ya pasó nuestro primer mes.</p>
-<p>Espero de todo corazón que podamos seguir por muchísimos meses más juntos. Sinceramente, sí quiero estar a tu lado por muchísimo tiempo, si no es que por lo que me reste de vida. El cariño y amor que te tengo es demasiado inmenso, al punto de abrirme y ceder en cosas que jamás pensé que haría si te soy sincero. Pero es que me gusta escucharte feliz.</p>
-<p>Quizá no me guste el anime como a ti, quizá no me guste tanto Minecraft como a ti, pero me gusta involucrarme en tus gustos porque me gusta pasar tiempo contigo. Me gusta conocerte cada día un poquito más, escucharte hablar de las cosas que te gustan y, sobre todo, escucharte feliz. Para mí, tu bienestar y tu felicidad son demasiado importantes. La realidad es que eres mi prioridad.</p>
-<p>Sé que tal vez puedo ser terco, incluso molesto, y seguramente habrá algún defecto mío que encuentres con el tiempo porque no soy perfecto, eso es una realidad. Pero cada día trato de ser mejor que el anterior, no solamente por mí, sino también por nosotros. Sinceramente no quiero que terminemos.</p>
-<p>Por eso siempre te digo que me comuniques todo, que te abras conmigo y que tengas la confianza de contarme lo que sea. Quiero que cuando tengamos algún problema, en lugar de alejarnos o dejar que las cosas se hagan más grandes, podamos hablar, escucharnos y resolverlo juntitos, porque somos un equipo :3.</p>
-<p>Y sinceramente me pone un poquito triste no poder regalarte algo, unas flores, tus Sabritas o cualquier cosita que sé que te gustaría. Me encantaría poder darte el mundo entero, pero por el momento no me es posible con todos los gastos que tengo. Aun así, quería darte esta pequeña cartita, porque aunque sea algo sencillo, quería darte un pedacito de lo que siente mi corazón por ti.</p>
-<p>Gracias por este primer mes, por cada momento, cada plática, cada risa y por dejarme compartir todo esto contigo. Espero que este sea solamente el primero de muchísimos meses que podamos celebrar juntitos.</p>
-<div class="signature">Te amo muchísimo, muñeca. ❤️<br><br>Eres de lo mejor que me ha pasado en un buen ratototote.<br><br>MUAAAAAAAAAAAAAAAAAAAK 💋❤️</div>
-<div class="small">Hecho con muchísimo amor para ti ♡</div>
+
+
+<!-- =========================
+     CARTA
+========================= -->
+
+<section
+    class="letter"
+    id="letter">
+
+
+<h2>
+    Mi amooooooooor 💗
+</h2>
+
+
+<!-- CONTROL DE MÚSICA -->
+
+<div class="music-control">
+
+    <div class="music-title">
+
+        🎵 Vals Poético
+
+    </div>
+
+
+    <button
+        id="musicBtn"
+        onclick="toggleMusic()">
+
+        🔊 Pausar canción
+
+    </button>
+
+</div>
+
+
+
+<p>
+    Feliz mes juntitos ^ ^
+</p>
+
+
+<p>
+    No sabes realmente lo feliz que estoy de que ya haya pasado un mes desde que empezamos a estar juntitos. La verdad es que ha sido un mes en el que no he sentido pasar los días. Me la paso tan bien a tu lado que para mí fue como un abrir y cerrar de ojos y ya pasó nuestro primer mes.
+</p>
+
+
+<p>
+    Espero de todo corazón que podamos seguir por muchísimos meses más juntos. Sinceramente, sí quiero estar a tu lado por muchísimo tiempo, si no es que por lo que me reste de vida. El cariño y amor que te tengo es demasiado inmenso, al punto de abrirme y ceder en cosas que jamás pensé que haría si te soy sincero. Pero es que me gusta escucharte feliz.
+</p>
+
+
+<p>
+    Quizá no me guste el anime como a ti, quizá no me guste tanto Minecraft como a ti, pero me gusta involucrarme en tus gustos porque me gusta pasar tiempo contigo. Me gusta conocerte cada día un poquito más, escucharte hablar de las cosas que te gustan y, sobre todo, escucharte feliz. Para mí, tu bienestar y tu felicidad son demasiado importantes. La realidad es que eres mi prioridad.
+</p>
+
+
+<p>
+    Sé que tal vez puedo ser terco, incluso molesto, y seguramente habrá algún defecto mío que encuentres con el tiempo porque no soy perfecto, eso es una realidad. Pero cada día trato de ser mejor que el anterior, no solamente por mí, sino también por nosotros. Sinceramente no quiero que terminemos.
+</p>
+
+
+<p>
+    Por eso siempre te digo que me comuniques todo, que te abras conmigo y que tengas la confianza de contarme lo que sea. Quiero que cuando tengamos algún problema, en lugar de alejarnos o dejar que las cosas se hagan más grandes, podamos hablar, escucharnos y resolverlo juntitos, porque somos un equipo :3.
+</p>
+
+
+<p>
+    Y sinceramente me pone un poquito triste no poder regalarte algo, unas flores, tus Sabritas o cualquier cosita que sé que te gustaría. Me encantaría poder darte el mundo entero, pero por el momento no me es posible con todos los gastos que tengo. Aun así, quería darte esta pequeña cartita, porque aunque sea algo sencillo, quería darte un pedacito de lo que siente mi corazón por ti.
+</p>
+
+
+<p>
+    Gracias por este primer mes, por cada momento, cada plática, cada risa y por dejarme compartir todo esto contigo. Espero que este sea solamente el primero de muchísimos meses que podamos celebrar juntitos.
+</p>
+
+
+
+<div class="signature">
+
+    Te amo muchísimo, muñeca. ❤️
+
+    <br><br>
+
+    Eres de lo mejor que me ha pasado
+    en un buen ratototote.
+
+    <br><br>
+
+    MUAAAAAAAAAAAAAAAAAAAK 💋❤️
+
+</div>
+
+
+<div class="small">
+
+    Hecho con muchísimo amor para ti ♡
+
+</div>
+
+
 </section>
+
+
 </div>
+
 </div>
+
+
+
 <script>
-function openLetter(){
- document.getElementById('cover').style.display='none';
- document.getElementById('letter').style.display='block';
- window.scrollTo({top:0,behavior:'smooth'});
+
+
+/* =========================
+   AUDIO
+========================= */
+
+const musica =
+    document.getElementById("musica");
+
+
+musica.volume = 0.65;
+
+
+/* =========================
+   ABRIR CARTA
+========================= */
+
+function openLetter() {
+
+
+    /* Mostrar carta */
+
+    document.getElementById("cover")
+        .style.display = "none";
+
+
+    document.getElementById("letter")
+        .style.display = "block";
+
+
+    /*
+       Como esta función se ejecuta
+       después de que ella toca el botón,
+       el navegador permite reproducir
+       el audio.
+    */
+
+    musica.play()
+        .catch(function(error) {
+
+            console.log(
+                "No se pudo iniciar el audio:",
+                error
+            );
+
+        });
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
 }
-const box=document.getElementById('hearts');
-for(let i=0;i<18;i++){
- const h=document.createElement('div'); h.className='heart'; h.textContent=['♡','♥','💗','💖'][i%4];
- h.style.left=(Math.random()*100)+'%';
- h.style.animationDelay=(Math.random()*8)+'s';
- h.style.fontSize=(14+Math.random()*18)+'px';
- box.appendChild(h);
+
+
+/* =========================
+   PAUSAR / REANUDAR
+========================= */
+
+function toggleMusic() {
+
+
+    const button =
+        document.getElementById(
+            "musicBtn"
+        );
+
+
+    if (musica.paused) {
+
+
+        musica.play();
+
+
+        button.textContent =
+            "🔊 Pausar canción";
+
+
+    } else {
+
+
+        musica.pause();
+
+
+        button.textContent =
+            "▶️ Reproducir canción";
+
+    }
+
 }
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+const box =
+    document.getElementById("hearts");
+
+
+for (
+    let i = 0;
+    i < 18;
+    i++
+) {
+
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "heart";
+
+
+    heart.textContent =
+        [
+            "♡",
+            "♥",
+            "💗",
+            "💖"
+        ][i % 4];
+
+
+    heart.style.left =
+        (Math.random() * 100)
+        + "%";
+
+
+    heart.style.animationDelay =
+        (Math.random() * 8)
+        + "s";
+
+
+    heart.style.fontSize =
+        (14 + Math.random() * 18)
+        + "px";
+
+
+    box.appendChild(heart);
+
+}
+
 </script>
+
+
 </body>
 </html>
